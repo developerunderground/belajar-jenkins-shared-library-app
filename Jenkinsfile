@@ -12,4 +12,19 @@ pipeline {
       }
     }
   }
+
+  post {
+    always {
+      echo "Gas dah bray jenkins nyaaa"
+    }
+    success {
+      echo "MANTAP BERHASIL COOK!!"
+    }
+    failure {
+      echo "Ya ampun amsyong cook error"
+    }
+    cleanup {
+      echo "Dah beres nih build nya cuy"
+    }
+  }
 }
