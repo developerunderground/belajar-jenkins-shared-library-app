@@ -6,7 +6,7 @@ pipeline {
     stage("Hello World") {
       steps {
         script {
-          hello.World()
+          hello.world()
         }
       }
     }
