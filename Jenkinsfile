@@ -5,7 +5,7 @@ pipeline {
     EMAIL = "wahyuditaruna97@gmail.com"
   }
 
-  option {
+  options {
     disableConcurrentBuilds()
     timeout(time: 10, unit: 'SECONDS')
   }
