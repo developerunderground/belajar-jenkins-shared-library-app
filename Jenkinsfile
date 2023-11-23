@@ -6,10 +6,11 @@ pipeline {
   agent any
   stages {
 
-    stage("Hello Grovy") {
+    stage("Global Variabel") {
       steps {
         script {
-          Output.hello(this, "Groovy")
+          echo(author.name())
+          echo(author.channel())
         }
       }
     }
@@ -21,5 +22,14 @@ pipeline {
         }
       }
     }
+
+    stage("Hello Grovy") {
+      steps {
+        script {
+          Output.hello(this, "Groovy")
+        }
+      }
+    }
+
   }
 }
