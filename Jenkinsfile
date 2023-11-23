@@ -6,6 +6,15 @@ pipeline {
   agent any
   stages {
 
+    stage("Library Resources") {
+      steps {
+        script {
+          def config = libraryResource("config/build.json")
+          echo("config")
+        }
+      }
+    }
+
     stage("Maven Build") {
       steps {
         script {
